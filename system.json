@@ -1,0 +1,47 @@
+{
+  "id": "arkham-horror",
+  "title": "Arkham Horror, the Roleplaying Game",
+  "description": "FoundryVTT module for Arkham Horror RPG, based on the DPS system.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 12
+  },
+  "authors": [{
+    "name": "offendo",
+    "discord": "offendo"
+  }],
+  "esmodules": ["mysystem.mjs"],
+  "styles": ["styles/arkham-styles.css"],
+  "packs": [{
+    "name": "enemies",
+    "label": "Enemies",
+    "type": "Actor"
+  },
+  {
+    "name": "items",
+    "label": "Items",
+    "type": "Item"
+  }],
+  "documentTypes": {
+    "Actor": {
+      "hero": { "htmlFields": ["background.biography"] },
+      "villain": { "htmlFields": ["background.biography"] },
+      "pawn": {}
+    },
+    "Item": {
+      "weapon": {},
+      "spell": {}
+    }
+  },
+  "socket": false,
+  "initiative": "1d20",
+  "grid": {
+    "distance": 10,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "resources.dicepool",
+  "url": "https://github.com/offendo/arkham-horror",
+  "manifest": "https://your/hosted/system/repo/system.json",
+  "download": "https://your/packaged/download/archive.zip"
+}
