@@ -13,21 +13,29 @@
   }],
   "esmodules": ["mysystem.mjs"],
   "styles": ["styles/arkham-styles.css"],
-  "packs": [{
-    "name": "enemies",
-    "label": "Enemies",
-    "type": "Actor"
-  },
-  {
-    "name": "items",
-    "label": "Items",
-    "type": "Item"
-  }],
+  "packs": [
+    {
+      "name": "enemies",
+      "label": "Enemies",
+      "type": "Actor"
+    },
+    {
+      "name": "items",
+      "label": "Items",
+      "type": "Item"
+    }
+  ],
   "documentTypes": {
     "Actor": {
-      "hero": { "htmlFields": ["background.biography"] },
-      "villain": { "htmlFields": ["background.biography"] },
-      "pawn": {}
+      "investigator": {
+        "htmlFields": ["biography", "name"],
+        "filePathFields": {
+          "profile": ["IMAGE"]
+        }
+      },
+      "villain": {
+        "htmlFields": ["biography", "name"]
+      }
     },
     "Item": {
       "weapon": {},
@@ -37,11 +45,12 @@
   "socket": false,
   "initiative": "1d20",
   "grid": {
-    "distance": 10,
+    "distance": 5,
     "units": "ft"
   },
-  "primaryTokenAttribute": "resources.dicepool",
+  "primaryTokenAttribute": "resources.dicePool",
+  "secondaryTokenAttribute": "resources.dicePoolLimit",
   "url": "https://github.com/offendo/arkham-horror",
-  "manifest": "https://your/hosted/system/repo/system.json",
-  "download": "https://your/packaged/download/archive.zip"
+  "manifest": "https://raw.githubusercontent.com/offendo/arkham-horror/refs/heads/main/system.json",
+  "download": ""
 }
